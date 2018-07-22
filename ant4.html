@@ -1,0 +1,69 @@
+<body text="#000000" link="#800080" vlink="#000000"><body background="./images/mauzerbak.gif">
+</body background>
+
+
+
+<td><center><img SRC="./images/xfrmer-1b.jpg"><br></center>
+
+<font size = "3"><b>Feeding</b></font><br><br>
+
+	An antenna of this size for 75 and 40 meters has a very low radiation resistance, typically 8-15 ohms. My 75 meter radiation resistance appears
+ to be about 10 ohms. The lossier versions of such mobile antennas have higher impedances largely due to resistive losses. Trading high performance
+ and narrower bandwidth for lower losses seemed acceptable to me, but it requires some way to match the impedance to the coax, particularly when
+ operating slightly off resonance with a tuner. I went with the unbalanced to unbalanced transmission line transformer to accomplish this impedance
+ matching. Here's why:<br><br>
+
+ The great advantage of transmission line transformer matching over other methods, such as tapped coils and tuned shunts, is that it's not very
+ sensitive to frequency. Or in other words, the matching device does not effect the resonant frequency of the antenna. These devices can be
+ incredibly efficient when built with the right materials. Loss measurements are typically less than 0.1dB. My crude tests in the shack show
+ better than 98% efficiency, somewhat better then 0.08dB loss! Sure beats the loss on the coax with a 4:1 impedance mismatch.<br><br>
+ Once your antenna is tuned to resonance you could remove the xfmr and still operate with reasonable effectivness since the tuning won't channge.
+ Yes, your SWR will rise but your resonant antenna currents will still be where you need them to radiate effectivley.  If using an antenna tuner
+ without the transformer, you can certainly tune the "system" for a match, but the losses after the tuner remain the same since the cable and load
+ are still mismatched.  Similarly, you can retune, or change bands (40 meters in my case) and not have to play with the matching network at all
+ since the transformer is basically frequency independant throughout the HF band. Different types of cores can be selected to optimize the passband
+ for different frequency ranges. Some are best from several hundred KHz through 10 MHz, while others will be most effective from a few MHz to over
+ 50MHz or more. My xfmr falls in the latter category as I assumed 160 Meters to be a low priority, and likely an even lower radiation resistance 
+will require a differnt xfmr for that band anyway. <br><br>
+Bottom line is; I think transmission line transformers are remarkably effective and useful devices. While somehwat abstract to understand they are 
+very easy to build. For more detailed information and lots of cookbook style examples Jerry Sevick's book on tranmission line tranformers 
+<A href ="http://bytemark.com/amidon/content6.htm">{Transmission Line Transformers by Jerry Sevick W2FMI Third Edition, © 1996, Noble Publishing.
+ (ISBN: 1-884932-66-5)}</a> is an excellent Amateur reference for those interested in further reading. <br><br>
+ 
+Input impedance on this antenna on 40 meters is about 17 ohms, so the transformer still does a good job matching down from 50.<br><br>
+
+To be fair, I did play around with some conventional methods of shunt coil and series capacitor matching, but it changed the resonance of the
+ whole antenna and I couldn't change bands without having several prefab matching networks to swap. Way too much work, certainly nothing I could
+ jump out and do at a red light. <br><br>
+
+75m bandwidth is 9 KHz and 40m bandwidth is 16 KHz on this antenna. If you don't have a tuner in your radio you can operate reasonably well over
+ this bandwidth without it. After that you have to move or add coil taps (hence the convenience of my bandswitch).<br><br>
+
+Construction:<br>
+ 
+The mount uses a standard insulated SO-239 to 3/8'-24tpi whip coupling through the bracket. $4.99 at Radio Shack. This allowed me to fabricate a
+ sealed enclosure using 2-1/2" PVC pipe with panel mount SO-239s on each end in polycarbonate and caps. End caps are sealed with O-rings and held by three 4-40 screws.
+Finally, a 26 gauge copper strap from end to end provides a solid ground for input and output and is stamped with each terminal's impedance.
+The 2 1/4" overall diameter of the transformer is fits perfect in this pipe. <br><br>
+
+Basically, this is a simple unbalanced-unbalanced 4:1 Ruthroff transformer. It uses two toroidal cores (although one would have been
+ sufficient) of medim permeability type 43 ferrite (mu = 850). Around this is wound 9 turns of DOUBLED 50 ohm tranmission line. Ideally, this line's 
+impedance should be the arithmetic mean between to the two terminating impedances. In this case, matching 50:12.5 ohms would require 25 ohm coax or 
+stripline. Well, I didn't have either, and I didn't want make 25 ohm stripline, for reasons I won't go into. But I did have some of that nice 50 ohm, 
+teflon insulated RG-174U. It's about 0.1" diameter and using two in parallel yeilds 25 ohms. I don't know why but the idea of using parallel windings 
+for this purpose isn't suggested in the references I've reviewed. So I take credit for assuming the obvious. I later discovered others have done this 
+successfully. It works great!<br><br>
+<center><table COLS=2 WIDTH="100%">
+<tr>
+<td><center><a href ="./images/LoZ4-1schem.jpg"><img SRC="./images/LoZ4-1schem.jpg" height=220 width=330></center>  </a></td>
+
+<td><center><a href ="./images/LoZ4-1unun.jpg"><img SRC="./images/LoZ4-1unun.jpg" height=220 width=330></a></center></td>
+</tr>
+<tr><td><center>Schematic</center></td><td><center>Construction - click for larger view</center></td></tr>
+</center></table> 
+
+<center><A href="index.html">Back to Main Page</a></center>
+<br>
+</center>
+
+

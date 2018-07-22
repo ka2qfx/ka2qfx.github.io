@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META name="description" content="">
+<META name="keywords" content="">
+<META name="generator" content="CuteHTML">
+</HEAD>
+<body text="#000000" link="#800080" vlink="#000000"><body background="./images/graybak.gif">
+<table COLS=2 WIDTH="100%">
+
+<tr>
+<td><center><img SRC="./images/epsfrnt.jpg" height="400" Width="600"></td>
+<td><center><img SRC="./images/epstopnoted.jpg" height="400" Width="600"></td></tr>
+<tr><td><Center>Front Panel</td><td><center>Top View</td></td>
+</table>
+<br>
+This is the preliminary layout of the Power Supply.</center><br><br>
+  It will contain the main 130 volt supply and several other sources of DC for all peripheral circuits.  I am however intent on designing a significantly
+ different power supply system from those employed by other builders. This will be a regulated supply and will not be powered down during receive, it will be
+"switched" off however, as will be explained further on.  The front panel will provide HV Voltage and Current metering as well as adjustments, Low Voltage 
+Supply fuse holders, main circuit breaker and indicator lights. <br><br>
+
+ Most other builders have been incorporating the lower voltage supplies required for various sub stages into the particular units themselves.
+For example, the modulator requires a 12 volt supply which floats off ground to supply operating voltage to the FET driver devices.  This is required 
+since the modulator operates as a Source Follower supply to the RF deck. Since the driver of the modulator functions by switching the gate voltage 
+relative to the source, it must therefore float up and down as the source voltage varies. It would seem that floating the supply directly inside modulator
+deck using the magnetic coupling of a small power transformer to isolate the supply from ground is a logical one.  But this requires bringing 110 or 220 
+volts AC into the modulator deck. This is something I'd rather avoid in both the RF and Modulator Deck entirely. I should be able to just as easily provide
+a clean source of floating filtered DC from the main power supply using a common mains switching system. By doing so, I can more easily provide common saftey 
+cutoff system should one supply fail. <br><br>
+The other, and more signficant, departure from convention will be in the design of the primary DC voltage supplied to the modulator and subsequently
+to the RF deck.  Current convention calls for this supply to be a rectified, filtered and unregulated DC supply from the secondary of a suitable power 
+transformer. Under load this voltage should be maintained at about 130 volts by the load in conjunction with the various voltage drops occurring across 
+several supply components. This requires a secondary voltage of about 105 volts and that AC be cuttoff during receive to avoid surging of the voltage in 
+the filter bank. The DC from the filter bank is also cut off for good measure. This provides an optimum condition for conserving power during standby but 
+also requires several heavy relays and some protection ("step start" or "soft start") circuits to prevent initial surge currents from exceeding safe 
+limits.  <br><BR>
+I would prefer to have as few heavy switching devices as possible and be able to utilize commonly available 1:1 or 2:1 power (isolation) transformers. Hence, I am 
+designing a voltage regulation circuit which operates on the rectifier side of the filter bank using SCR technology and a inductive input filter much like 
+switching regulator. This regulation would accomodate both soft start and full load regulation and produce only negligible power consumption (the unloaded 
+transformer and control circuitry) during standby.<br><br>
+Soft start: I've greatly simplified my design and construction by utilizing a conventional step-start resistance in the primary of the HV transformer.
+However, this is not a time delay device. Rather, it will only close if, and when, the supply filters have reached a pre-determined voltage. Doing this 
+prevents full load being applied if there is a shorted supply problem. In the event of a short the step-start resistor will be abruptly and demonstrably 
+sacrificed in lieu of other (more expensive) components.<br><br>
+
+A fully detailed schematic will be posted as details evolve. However the basic circuit below has been tested and works well. A few tweeks should result
+in a very adequate supply.<br>
+
+<center> <img src= "./images/scrreg.jpg"><br>Preliminary Regulator Schematic<br>Updates pending.</a></center><br><br>
+
+
+Here's some more images of the completed work as of 4/21/10<br>
+Click on images for full size detail<br><br>
+
+<table cols="3" width="100%">
+<tr><td><center><a href ="./images/epspainted.jpg"><img src = "./images/epspainted.jpg" height="250" width="350"></a><br>
+ This is the front panel in finished paint, black appliance epoxy.</td>
+<td><center><a href ="./images/lowside.jpg"><img src="./images/lowside.jpg"height="250" width="350"></a><br>
+This is the low voltage side of the supply. Transformer has two output windings, one floating driver supply and +/- 12 volt supply. AC voltage select block (120/240V) is on top of low voltage xfmr.</td>
+<td><center><a href ="./images/rectblock.jpg"><img src="./images/rectblock.jpg"height="250" width="350"></a><br>
+This is the rectifier block for all supply voltages. Likely the hottest part of the entire project.</td></tr>
+
+<tr><td><center><a href ="./images/regblock.jpg"><img src="./images/regblock.jpg"height="250" width="350"></a><br>
+This SCR and Diode comprise the regulator block. They are bolted to the input side of the supply filter inductor.</td>
+<td><center><a href ="./images/regmodule.jpg"><img src="./images/regmodule.jpg"height="250" width="350"></a><br>
+This better shows the control harness terminal strip. The step-start relay is in the corner. Step-start resitor is under the lip of the front panel.
+</td>
+<td><center><a href ="./images/harness.jpg"><img src="./images/harness.jpg"height="250" width="350"></a><br>
+This is the regulator "module". The entire heat sink is mounted on Lexan since it has 170 rect. AC on it.</td></tr>
+
+<tr><td><center><a href ="./images/ACfilter.jpg"><img src="./images/ACfilter.jpg"height="250" width="350"></a><br>
+30 Amp AC input filter is mounted under the regulator module, between the Lexan standoffs.</td>
+<td><center><a href ="./images/cablerun.jpg"><img src="./images/cablerun.jpg"height="250" width="350"></a><br>
+Laced wiring runs down each side to rear panel. Lacing really "neatens" up a project. IMHO</td>
+<td><center><a href ="./images/rearpanl.jpg"><img src="./images/rearpanl.jpg"height="250" width="350"></a><br>
+Regulator control board, low voltage fuses and all input/output will be on rear panel.</td></tr>
+
+<tr><td><center><a href ="./images/lvcapbrkt.jpg"><img src="./images/lvcapbrkt.jpg"height="250" width="350"></a><br>
+Low Voltage Supply Caps Bracket</td></tr>
+
+
+
+
+
+
+</table>
+</body>
+
+
+</HTML>
